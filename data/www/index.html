@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8" name="mobile-web-app-capable" content="yes">
+        <title>ESP32 RGB LED controller</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+
+    <body>
+        <hr>
+        <hr>
+        <input id="sliderr" type="range" min="0" max="10" step="1"/>
+        <p>value : <output id="valuee" color="red">ko</output></p>
+        <div id="joystick" class="joystick">
+            <div id="joystick-frame" class="joystick-frame">
+                <div id="joystick-ball" class="joystick-ball"></div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+    
+</html>
