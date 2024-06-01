@@ -13,19 +13,24 @@ input.addEventListener("input", (event) => {
     value.textContent = event.target.value;
 
     var data = {
-        x : event.target.value
+        x: event.target.value
     }
     var send_json = JSON.stringify(data);
 
     const xhr = new XMLHttpRequest()
-    xhr.open("POST","/send",true)
+    xhr.open("POST", "/send", true)
     xhr.setRequestHeader("Content-Type", "application/json")
     xhr.timeout = 5000
     xhr.send(send_json)
     console.log(send_json)
 });
 
+function resetToNutoral(obj) {
+    console.log(obj)
+    console.log(obj.value)
+}
 
+/*
 let joystickBall;
 let joystickCenterX;
 let joystickCenterY;
@@ -83,3 +88,4 @@ window.addEventListener("resize", () => {
     joystickCenterY =
         joystickBall.getBoundingClientRect().top + joystickBall.clientHeight / 2;
 });
+*/
