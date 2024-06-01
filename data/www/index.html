@@ -11,7 +11,7 @@
     <body>
         <hr>
         <hr>
-        <input id="sliderr" type="range" min="0" max="10" step="1"/>
+        <input id="sliderr" type="range" min="0" max="10" step="1" onblur="resetToNutoral(this)" />
         <p>value : <output id="valuee" color="red">ko</output></p>
         <div id="joystick" class="joystick">
             <div id="joystick-frame" class="joystick-frame">
@@ -20,5 +20,5 @@
         </div>
         <script src="main.js"></script>
     </body>
-    
+
 </html>

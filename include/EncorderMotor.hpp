@@ -2,6 +2,8 @@
 
 #include <Arduino.h>
 
+// EncoderMotor{エンコーダー入力1, エンコーダー入力2, モーター出力指定正, モーター出力指定負}
+
 class EncorderMotor {
     public:
     int inputPin1;   //H1pin

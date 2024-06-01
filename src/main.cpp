@@ -7,7 +7,8 @@ char *pass = "unyooooonn";
 
 WiFiAP_Server wifiAP_Server(ssid, pass);
 
-EncorderMotor motor(14, 27, 26, 25);
+EncorderMotor motorLeft(14, 27, 26, 25);
+// EncorderMotor motorRight(14, 27, 26, 25);
 
 void setup() {
     Serial.begin(9600);
@@ -15,16 +16,16 @@ void setup() {
     const IPAddress subnet(255, 255, 255, 0);
     wifiAP_Server.beginAP(ip, subnet);
     wifiAP_Server.beginServer();
-    motor.stop();
+    motorLeft.stop();
 }
 
 void loop() {
     if(wifiAP_Server.sliderValue1 > 3 && wifiAP_Server.sliderValue1 < 7){
-        motor.stop();
+        motorLeft.stop();
     }else if(wifiAP_Server.sliderValue1 > 6){
-        motor.changeSpeed(1);
+        motorLeft.changeSpeed(1);
     }else{
-        motor.changeSpeed(-1);
+        motorLeft.changeSpeed(-1);
     }
     
 }
